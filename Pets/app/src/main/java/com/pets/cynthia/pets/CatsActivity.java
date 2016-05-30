@@ -15,12 +15,13 @@ public class CatsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cats);
+
         GridView gridview = (GridView) findViewById(R.id.gridView);
-        gridview.setAdapter(new ImageAdapter(this));
+        gridview.setAdapter(new ImageAdapterActivity(this));
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+//  @Override
+//   public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu,menu);
+//        return true;
+//   }
 }

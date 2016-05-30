@@ -17,7 +17,7 @@ public class WhatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.what);
+     setContentView(R.layout.what);
         String[] candidates = {
                 "Jane kimani",
                 "John karani",
@@ -28,17 +28,20 @@ public class WhatActivity extends AppCompatActivity {
                 "William Henry",
                 "Brian jackson",
                 "Millard Fillmore",
+                "Brillian Chebet"};
 
-        "Brillian Chebet"};
-        ListAdapter adapter = new ArrayAdapter<String>(this,R.layout.row_layout, candidates);
+       ListAdapter adapter = new ArrayAdapter<String>(this,R.layout.row_layout,candidates);
+
 
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(adapter);
+
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                 String itempicked= "You selected" + String.valueOf(parent.getItemAtPosition(position));
-                Toast.makeText(WhatActivity.this, itempicked, Toast.LENGTH_SHORT).show();
+                 String Itempicked = "You selected" + String.valueOf(parent.getItemAtPosition(position));
+                Toast.makeText(WhatActivity.this, Itempicked, Toast.LENGTH_SHORT).show();
             }
         });
 
